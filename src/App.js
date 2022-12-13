@@ -18,11 +18,6 @@ const App = () => {
         <Routes>
           <Route index element={<HomeScreen />} />
           <Route path="/newRecipe" element={<NewRecipeScreen />} />
-          <Route path="/recipe/:id" element={<RecipeScreen />} />
-          <Route path="/newStory" element={<NewStoryScreen />} />
-          <Route path="/story/:id" element={<StoryScreen />} />
-          <Route path="newAdvice" element={<NewAdviceScreen />} />
-          <Route path="/advice:id" element={<AdviceScreen />} />
         </Routes>
       </main>
     </div>
