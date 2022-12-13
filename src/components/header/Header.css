@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Fleur+De+Leah&display=swap');
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #A2E3C4 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 20px 0;
+} 
+
+.header-h2-styles {
+  font-family: "Fleur De Leah";
+  font-size: 80px;
+  font-weight: 100;
+  color: #3C493F;
+  padding-left: 20px;
+ }
+
+ .nav-btn {
+  font-family: "Abhaya Libre";
+  font-weight: 200;
+  font-size: 20px;
+  color: #7E8D85;
+  border: none;
+  background-color: #A2E3C4;
+  padding-right: 20px;
+ }
+
+ .nav-btn:hover {
+  background-color: #F0F7F4;
+  color: #3C493F;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
+ }
+
+ nav {
+  padding-right: 20px;
+ }
