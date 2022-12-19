@@ -52,7 +52,7 @@ const NewRecipeScreen = () => {
                 type="text"
                 value={values.ingredients}
                 name="ingredients"
-                placeholder="-ingredient -ingredient -ingredient"
+                placeholder="ingredient ingredient ingredient"
                 onChange={handleChange}
               ></textarea>
             </div>

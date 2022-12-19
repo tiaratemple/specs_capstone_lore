@@ -8,7 +8,7 @@
 }
 
 .form-h1-styles {
-  font-size: 30px;
+  font-size: 40px;
   font-family: "Abhaya Libre";
   padding: 20px 0 0 0;
   color: #3C493F;
@@ -57,9 +57,9 @@
   border: 1px solid #3C493F;
   margin-bottom: 10px;
   font-family: "Abhaya Libre";
-  height: 150px;
-  width: 100px;
-  font-size: 20px;
+  height: 200px;
+  width: 150px;
+  font-size: 18px;
 }
 
 .form-row-4 {
@@ -73,8 +73,8 @@
   border: 1px solid #3C493F;
   margin-bottom: 10px;
   font-family: "Abhaya Libre";
-  height: 100px;
-  width: 300px;
+  height: 200px;
+  width: 450px;
   font-size: 20px;
 }
 
@@ -87,8 +87,8 @@
   background-color: #3C493F;
   color: #f0f7f4;
   border: none;
-  height: 25px;
-  width: 80px;
+  height: 30px;
+  width: 100px;
   font-family: "Abhaya Libre";
-  font-size: 15px;
+  font-size: 20px;
 }

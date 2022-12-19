@@ -2,35 +2,48 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/AuthContext";
 import "./Auth.css";
+import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [register, setRegister] = useState(true);
-  const [message, setMessage] = useState("");
-  const [display, setDisplay] = useState("none");
 
   const authCtx = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const enterUsername = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const enterPassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const changeRegisterState = (e) => {
+    setRegister(!register);
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    setDisplay("none");
 
     const body = {
       username,
       password,
     };
 
-    const url = "http://localhost:3000";
-    console.log("login");
+    let url = register ? "/register" : "/login";
+
     axios
       .post(`${url}/login`, body)
       .then((res) => {
         console.log("AFTER AUTH", res.data);
         authCtx.login(res.data.token, res.data.exp, res.data.userId);
+        navigate("/home");
       })
       .catch((err) => {
+        setUsername("");
+        setPassword("");
         console.log(err);
       });
   };
@@ -48,17 +61,19 @@ const Auth = () => {
             type="text"
             placeholder="Username"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={enterUsername}
           />
           <input
             className="login-form-input"
             type="password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={enterPassword}
           />
           <button className="login-btn">Login</button>
-          <button className="create-acct-btn">Create new account</button>
+          <button className="create-acct-btn" onClick={changeRegisterState}>
+            Create new account
+          </button>
         </form>
       </div>
     </main>
