@@ -1,0 +1,53 @@
+.new-advice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-advice-title {
+  font-size: 50px;
+  font-family: "Abhaya Libre";
+  padding: 20px 0 0 0;
+  color: #3C493F;
+}
+
+.advice-form-top textarea {
+  border: 1px solid #3C493F;
+  margin-bottom: 10px;
+  font-family: "Abhaya Libre";
+  font-size: 20px;
+  height: 200px;
+  width: 300px;
+}
+
+.advice-form-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.advice-form-bottom input {
+  border: 1px solid #3C493F;
+  margin-bottom: 10px;
+  font-family: "Abhaya Libre";
+  font-size: 15px;
+  height: 30px;
+}
+
+.advice-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.save-advice-btn {
+  background-color: #3C493F;
+  color: #f0f7f4;
+  border: none;
+  height: 30px;
+  width: 100px;
+  font-family: "Abhaya Libre";
+  font-size: 20px;
+  margin-top: 10px;
+}

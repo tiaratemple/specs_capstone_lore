@@ -15,18 +15,19 @@ import { useLocation } from "react-router-dom";
 const App = () => {
   const authCtx = useContext(AuthContext);
   const location = useLocation();
+  console.log("authctx", authCtx);
   return (
     <div className="App">
       {location.pathname !== "/auth" && <Header />}
       <main>
         <Routes>
+          <Route path="/" element={<HomeScreen />} />
           <Route
             path="/auth"
             element={!authCtx.token ? <Auth /> : <Navigate to="/" />}
           />
-          <Route index element={<HomeScreen />} />
           <Route path="/newRecipe" element={<NewRecipeScreen />} />
-          <Route path="/recipe/:id" element={<RecipeScreen />} />
+          <Route path="/recipes/:userId" element={<RecipeScreen />} />
           <Route path="/newStory" element={<NewStoryScreen />} />
           <Route path="/story/:id" element={<StoryScreen />} />
           <Route path="newAdvice" element={<NewAdviceScreen />} />

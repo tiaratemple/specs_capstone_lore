@@ -4,14 +4,15 @@ import "./Header.css";
 import { BsSearch } from "react-icons/bs";
 
 const Header = () => {
+  const userId = localStorage.getItem("userId") ?? "";
   return (
     <header>
       <h2 className="header-h2-styles">Lore</h2>
       <nav>
-        <Link to="">
+        <Link to="/">
           <button className="nav-btn">Home</button>
         </Link>
-        <Link to="">
+        <Link to={`/recipes/${userId}`}>
           <button className="nav-btn">Recipes</button>
         </Link>
         <Link to="">

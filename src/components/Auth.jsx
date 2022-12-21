@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Auth = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [register, setRegister] = useState(true);
+  const [register, setRegister] = useState();
 
   const authCtx = useContext(AuthContext);
   const navigate = useNavigate();
@@ -20,11 +20,8 @@ const Auth = () => {
     setPassword(e.target.value);
   };
 
-  const changeRegisterState = (e) => {
-    setRegister(!register);
-  };
-
   const submitHandler = (e) => {
+    console.log("are we logging in or register", register);
     e.preventDefault();
 
     const body = {
@@ -32,14 +29,14 @@ const Auth = () => {
       password,
     };
 
-    let url = register ? "/register" : "/login";
+    const url = "http://localhost:3000";
 
     axios
-      .post(`${url}/login`, body)
+      .post(register ? `${url}/register` : `${url}/login`, body)
       .then((res) => {
         console.log("AFTER AUTH", res.data);
         authCtx.login(res.data.token, res.data.exp, res.data.userId);
-        navigate("/home");
+        navigate("/");
       })
       .catch((err) => {
         setUsername("");
@@ -70,8 +67,10 @@ const Auth = () => {
             value={password}
             onChange={enterPassword}
           />
-          <button className="login-btn">Login</button>
-          <button className="create-acct-btn" onClick={changeRegisterState}>
+          <button className="login-btn" onClick={() => setRegister(false)}>
+            Login
+          </button>
+          <button className="create-acct-btn" onClick={() => setRegister(true)}>
             Create new account
           </button>
         </form>
