@@ -2,9 +2,11 @@ import "../recipePage/RecipePage.css";
 import { useContext, useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import AuthContext from "../../store/AuthContext";
+import AddRecipe from "../../components/addRecipe/AddRecipe";
 
 const RecipeScreen = () => {
   const [recipes, setRecipes] = useState([]);
+  const [showAddRecipeForm, setShowAddRecipeForm] = useState(false);
 
   const { userId } = useContext(AuthContext);
 
@@ -21,17 +23,26 @@ const RecipeScreen = () => {
 
   useEffect(() => {
     getUserRecipes();
-    console.log("length", recipes.length);
   }, [getUserRecipes, recipes]);
 
-  //show text to add recipe if no recipes exist
+  const hideForm = () => {
+    setShowAddRecipeForm(false);
+  };
+
+  const addNewRecipe = () => {
+    setShowAddRecipeForm(true);
+  };
   return (
     <>
       <h1>Recipes</h1>
       {!recipes.length && (
         <p>No recipe has been added yet. Please add a recipe below</p>
       )}
-      <button>Add new recipe</button>
+      <button onClick={() => addNewRecipe()}>Add new recipe</button>
+      {showAddRecipeForm && (
+        <button onClick={() => hideForm()}>Hide Form</button>
+      )}
+      {showAddRecipeForm && <AddRecipe />}
     </>
   );
 };
