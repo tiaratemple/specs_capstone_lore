@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
-import "./NewStory.css";
+import "../addStories/AddStories.css";
 
 const NewStoryScreen = () => {
   const initialValues = {

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import AuthContext from "../store/AuthContext";
+import AuthContext from "../../store/AuthContext";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,6 @@ const Auth = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [register, setRegister] = useState();
-
   const authCtx = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -29,7 +28,7 @@ const Auth = () => {
       password,
     };
 
-    const url = "http://localhost:3000";
+    const url = "http://localhost:4000";
 
     axios
       .post(register ? `${url}/register` : `${url}/login`, body)

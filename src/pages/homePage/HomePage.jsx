@@ -1,4 +1,4 @@
-import "./HomeScreen.css";
+import "../homePage/HomePage.css";
 
 const HomeScreen = () => {
   return (

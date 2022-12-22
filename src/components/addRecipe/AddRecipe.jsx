@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
-import "./NewRecipeScreen.css";
+import "../addRecipe/AddRecipe.css";
 
 const NewRecipeScreen = () => {
   const initialValues = {

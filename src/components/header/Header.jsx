@@ -15,10 +15,10 @@ const Header = () => {
         <Link to={`/recipes/${userId}`}>
           <button className="nav-btn">Recipes</button>
         </Link>
-        <Link to="">
+        <Link to={`/stories/${userId}`}>
           <button className="nav-btn">Stories</button>
         </Link>
-        <Link to="">
+        <Link to={`/advices/${userId}`}>
           <button className="nav-btn">Advice</button>
         </Link>
         <BsSearch size="1em" color="#7E8D85" />

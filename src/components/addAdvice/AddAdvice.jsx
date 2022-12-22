@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
-import "./NewAdvice.css";
+import "../addAdvice/AddAdvice.css";
 
 const NewAdviceScreen = () => {
   const initialValues = {

@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import Header from "./components/header/Header";
 import { Route, Routes, Navigate } from "react-router-dom";
-import HomeScreen from "./components/home/HomeScreen";
-import NewRecipeScreen from "./components/recipes/NewRecipeScreen";
-import RecipeScreen from "./components/recipes/RecipeScreen";
-import NewStoryScreen from "./components/stories/NewStoryScreen";
-import StoryScreen from "./components/stories/StoryScreen";
-import NewAdviceScreen from "./components/advice/NewAdviceScreen";
-import AdviceScreen from "./components/advice/AdviceScreen";
-import Auth from "./components/Auth";
+import HomeScreen from "./pages/homePage/HomePage";
+import NewRecipeScreen from "./components/addRecipe/AddRecipe";
+import RecipeScreen from "./pages/recipePage/RecipePage";
+import NewStoryScreen from "./components/addStories/AddStories";
+import StoryScreen from "./pages/storiesPage/StoriesPage";
+import NewAdviceScreen from "./components/addAdvice/AddAdvice";
+import AdviceScreen from "./pages/advicePage/AdvicePage";
+import Auth from "./utils/Authentication/Auth";
 import AuthContext from "./store/AuthContext";
 import { useLocation } from "react-router-dom";
 
@@ -29,9 +29,9 @@ const App = () => {
           <Route path="/newRecipe" element={<NewRecipeScreen />} />
           <Route path="/recipes/:userId" element={<RecipeScreen />} />
           <Route path="/newStory" element={<NewStoryScreen />} />
-          <Route path="/story/:id" element={<StoryScreen />} />
+          <Route path="/stories/:userId" element={<StoryScreen />} />
           <Route path="newAdvice" element={<NewAdviceScreen />} />
-          <Route path="/advice:id" element={<AdviceScreen />} />
+          <Route path="/advices/:userId" element={<AdviceScreen />} />
         </Routes>
       </main>
     </div>

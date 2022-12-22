@@ -13,7 +13,7 @@ module.exports = {
     }
   },
 
-  getCurrentUserRecipes: async (req, res) => {
+  getUserRecipes: async (req, res) => {
     try {
       const { userId } = req.params;
       const recipes = await Recipe.findAll({
