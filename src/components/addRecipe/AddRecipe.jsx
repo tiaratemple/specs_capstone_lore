@@ -1,10 +1,12 @@
-import React from "react";
 import { Formik } from "formik";
 import "../addRecipe/AddRecipe.css";
+import axios from "axios";
+import { useContext } from "react";
+import AuthContext from "../../store/AuthContext";
 
-const NewRecipeScreen = () => {
+const AddRecipe = () => {
+  const { token, userId } = useContext(AuthContext);
   const initialValues = {
-    type: "",
     recipeName: "",
     passedOnFrom: "",
     prep: "",
@@ -13,7 +15,21 @@ const NewRecipeScreen = () => {
   };
 
   const onSubmit = (values) => {
-    console.log(values);
+    console.log("values", values);
+    const { recipeName, passedOnFrom, prep, ingredients, instructions } =
+      values;
+    axios
+      .post(
+        `/recipes/addRecipe`,
+        { recipeName, passedOnFrom, prep, ingredients, instructions, userId },
+        {
+          headers: { authorization: token },
+        }
+      )
+      .then((res) => {
+        console.log("post", res);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -77,4 +93,4 @@ const NewRecipeScreen = () => {
   );
 };
 
-export default NewRecipeScreen;
+export default AddRecipe;

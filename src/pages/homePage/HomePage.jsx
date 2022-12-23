@@ -1,6 +1,6 @@
 import "../homePage/HomePage.css";
 
-const HomeScreen = () => {
+const HomePage = () => {
   return (
     <div>
       <h1 className="home">Welcome User</h1>
@@ -8,4 +8,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default HomePage;

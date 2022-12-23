@@ -4,8 +4,22 @@ const { Recipe } = require("../models/recipe");
 module.exports = {
   addRecipe: async (req, res) => {
     try {
-      const { title, content, userId } = req.body;
-      await Recipe.create({ title, content, userId });
+      const {
+        recipeName,
+        passedOnFrom,
+        prep,
+        ingredients,
+        instructions,
+        userId,
+      } = req.body;
+      await Recipe.create({
+        recipeName,
+        passedOnFrom,
+        prep,
+        ingredients,
+        instructions,
+        userId,
+      });
       res.sendStatus(200);
     } catch (error) {
       console.log(error);

@@ -9,7 +9,11 @@ module.exports = {
       allowNull: false,
       primaryKey: true,
     },
-    title: DataTypes.STRING,
-    content: DataTypes.TEXT,
+    recipeName: DataTypes.STRING,
+    passedOnFrom: DataTypes.STRING,
+    prep: DataTypes.STRING,
+    ingredients: DataTypes.STRING,
+    instructions: DataTypes.STRING,
+    //userId: DataTypes.INTEGER,
   }),
 };

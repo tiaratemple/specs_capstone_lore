@@ -1,8 +1,8 @@
 import React from "react";
 import { Formik } from "formik";
-import "../addStories/AddStories.css";
+import "./AddStory.css";
 
-const NewStoryScreen = () => {
+const AddStory = () => {
   const initialValues = {
     type: "",
     stories: "",
@@ -49,4 +49,4 @@ const NewStoryScreen = () => {
   );
 };
 
-export default NewStoryScreen;
+export default AddStory;

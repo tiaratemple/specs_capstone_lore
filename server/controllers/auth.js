@@ -33,7 +33,7 @@ module.exports = {
         });
         const token = createToken(
           newUser.dataValues.username,
-          newUser.datavalues.id
+          newUser.dataValues.id
         );
         console.log(newUser);
         const exp = Date.now() + 1000 * 60 * 60 * 48;
