@@ -21,10 +21,15 @@ const App = () => {
       {location.pathname !== "/auth" && <Header />}
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={
+              authCtx.token ? <HomePage /> : <Navigate replace to={"/auth"} />
+            }
+          />
           <Route
             path="/auth"
-            element={!authCtx.token ? <Auth /> : <Navigate to="/" />}
+            element={!authCtx.token ? <Auth /> : <Navigate replace to={"/"} />}
           />
           <Route path="/newRecipe" element={<AddRecipe />} />
           <Route path="/recipes/:userId" element={<RecipePage />} />

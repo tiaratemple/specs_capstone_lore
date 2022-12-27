@@ -16,8 +16,8 @@ app.use(cors());
 
 const { register, login } = require("./controllers/auth");
 const { isAuthenticated } = require("./middleware/isAuthenticated");
-const { addAdvice, getCurrentUserAdvices } = require("./controllers/advices");
-const { addStory, getCurrentUserStories } = require("./controllers/stories");
+const { addAdvice, getUserAdvices } = require("./controllers/advices");
+const { addStory, getUserStories } = require("./controllers/stories");
 const { addRecipe, getUserRecipes } = require("./controllers/recipes");
 
 User.hasMany(Recipe);

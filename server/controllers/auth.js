@@ -41,12 +41,12 @@ module.exports = {
         res.status(200).send({
           username: newUser.dataValues.username,
           userId: newUser.dataValues.id,
-          token: token,
+          token,
           exp,
         });
       }
     } catch (error) {
-      console.log(error);
+      console.log(error, "error in register");
       res.sendStatus(400);
     }
   },
@@ -70,14 +70,14 @@ module.exports = {
           res.status(200).send({
             username: foundUser.dataValues.username,
             userId: foundUser.dataValues.id,
-            token: token,
-            exp: exp,
+            token,
+            exp,
           });
         } else {
-          res.status(400).send("Cannot log in");
+          res.status(400).send("Cannot log in, first else");
         }
       } else {
-        res.status(400).send("Cannot log in");
+        res.status(400).send("Cannot log in, second else");
       }
     } catch (error) {
       console.log(error);

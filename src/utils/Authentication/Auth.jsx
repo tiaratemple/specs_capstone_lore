@@ -8,7 +8,9 @@ const Auth = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [register, setRegister] = useState();
+
   const authCtx = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const enterUsername = (e) => {
