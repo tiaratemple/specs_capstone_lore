@@ -46,9 +46,11 @@ const RecipePage = () => {
         </button>
       </div>
       {showAddRecipeForm && (
-        <button className="x-out-form-btn" onClick={() => hideForm()}>
-          x
-        </button>
+        <div className="x-btn-container">
+          <button className="x-out-form-btn" onClick={() => hideForm()}>
+            x
+          </button>
+        </div>
       )}
       {showAddRecipeForm && <AddRecipe />}
       {/* Recipe card should only show if we have recipes */}
