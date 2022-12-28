@@ -4,8 +4,8 @@ const { Story } = require("../models/story");
 module.exports = {
   addStory: async (req, res) => {
     try {
-      const { title, content, userId } = req.body;
-      await Story.create({ title, content, userId });
+      const { stories, storyBy, userId } = req.body;
+      await Story.create({ stories, storyBy, userId });
       res.sendStatus(200);
     } catch (error) {
       console.log(error);
@@ -13,7 +13,7 @@ module.exports = {
     }
   },
 
-  getCurrentUserStories: async (req, res) => {
+  getUserStories: async (req, res) => {
     try {
       const { userId } = req.params;
       const stories = await Story.findAll({

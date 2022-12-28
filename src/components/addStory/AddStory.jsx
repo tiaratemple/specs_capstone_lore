@@ -1,21 +1,37 @@
-import React from "react";
+import { useContext } from "react";
+import axios from "axios";
 import { Formik } from "formik";
 import "./AddStory.css";
+import AuthContext from "../../store/AuthContext";
 
 const AddStory = () => {
+  const { token, userId } = useContext(AuthContext);
   const initialValues = {
-    type: "",
     stories: "",
     storyBy: "",
   };
 
   const onSubmit = (values) => {
     console.log(values);
+    const { stories, storyBy } = values;
+
+    axios
+      .post(
+        `/stories/addStory`,
+        { stories, storyBy, userId },
+        {
+          headers: { authorization: token },
+        }
+      )
+      .then((res) => {
+        console.log("post", res);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
     <section className="new-story-container">
-      <h1 className="new-story-title">Stories</h1>
+      <h1 className="form-h1-styles">Add a Story</h1>
       <Formik initialValues={initialValues} onSubmit={onSubmit}>
         {({ values, handleChange, handleSubmit }) => (
           <form onSubmit={handleSubmit}>

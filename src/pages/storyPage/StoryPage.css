@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Fleur+De+Leah&display=swap');
-
-
 h1 {
   font-size: 50px;
   font-family: "Abhaya Libre";
@@ -11,26 +8,26 @@ h1 {
   align-items: center;
 }
 
-.add-recipe-btn-container {
+.add-story-btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.recipe-p-container {
+.story-p-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.recipe-p-text {
+.story-p-text {
   color:#3C493F;
   font-family: "Fleur De Leah";
   font-size: 35px;
   margin-bottom: 100px;
 }
 
-.add-recipe-btn {
+.add-story-btn {
   background-color: #B3BFB8;
   color: #3C493F;
   border: none;
@@ -39,18 +36,18 @@ h1 {
   font-family: "Abhaya Libre";
   font-size: 20px;
   border-radius: 5px;
-  margin-bottom: 30px;
+  margin: -30px 0 30px 0;
 }
 
-.x-btn-container {
+.x-out-story-btn-container {
   display: flex;
-  flex-direction: flex-end;
+  flex-direction: row;
   justify-content: right;
-  margin-right: 222px;
-  margin-bottom: -48px;
+  margin-right: 370px;
+  margin-bottom: -82px;
 }
 
-.x-out-form-btn {
+.x-out-story-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;

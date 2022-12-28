@@ -9,7 +9,7 @@ module.exports = {
       allowNull: false,
       primaryKey: true,
     },
-    title: DataTypes.STRING,
-    content: DataTypes.TEXT,
+    stories: DataTypes.STRING,
+    storyBy: DataTypes.STRING,
   }),
 };

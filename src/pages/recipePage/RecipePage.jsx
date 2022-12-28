@@ -38,7 +38,11 @@ const RecipePage = () => {
     <>
       <h1>Recipes</h1>
       {!recipes.length && (
-        <p>No recipe has been added yet. Please add a recipe below</p>
+        <div className="recipe-p-container">
+          <p className="recipe-p-text">
+            No recipe has been added yet. Please add a recipe below.
+          </p>
+        </div>
       )}
       <div className="add-recipe-btn-container">
         <button className="add-recipe-btn" onClick={() => addNewRecipe()}>

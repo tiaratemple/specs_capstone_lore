@@ -28,9 +28,13 @@ Story.belongsTo(User);
 Advice.belongsTo(User);
 
 app.get("/recipes/:userId", getUserRecipes);
+app.get("/stories/:userId", getUserStories);
+app.get("/advices/:userId", getUserAdvices);
 app.post("/register", register);
 app.post("/login", login);
 app.post("/recipes/addRecipe", addRecipe);
+app.post("/stories/addStory", addStory);
+app.post("/advices/addAdvice", addAdvice);
 
 // sequelize
 //   .sync({ force: true })

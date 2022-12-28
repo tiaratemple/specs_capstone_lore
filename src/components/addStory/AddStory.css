@@ -3,22 +3,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.new-story-title {
-  font-size: 50px;
-  font-family: "Abhaya Libre";
-  padding: 20px 0 0 0;
-  color: #3C493F;
+  border:solid#3C493F;
+  width:50%;
+  margin: 50px 0 50px 370px;
+  padding-bottom: 40px;
 }
 
 .story-form-top textarea {
   border: 1px solid #3C493F;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
   font-family: "Abhaya Libre";
   font-size: 25px;
   height: 400px;
   width: 500px;
+  border-radius: 5px;
+  background-color: #d9f7e8;
+
 }
 
 .story-form-bottom {
@@ -29,11 +29,13 @@
 
 .story-form-bottom input {
   border: 1px solid #3C493F;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-family: "Abhaya Libre";
-  font-size: 20px;
+  font-size: 18px;
   height: 30px;
-  width: 150px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #d9f7e8;
 }
 
 .story-btn-container {
@@ -50,5 +52,6 @@
   width: 100px;
   font-family: "Abhaya Libre";
   font-size: 20px;
-  margin-top: 20px;
+  margin: 20px 0 20px 0;
+  border-radius: 5px;
 }

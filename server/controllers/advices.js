@@ -4,8 +4,8 @@ const { Advice } = require("../models/advice");
 module.exports = {
   addAdvice: async (req, res) => {
     try {
-      const { title, content, userId } = req.body;
-      await Advice.create({ title, content, userId });
+      const { advice, adviceBy, userId } = req.body;
+      await Advice.create({ advice, adviceBy, userId });
       res.sendStatus(200);
     } catch (error) {
       console.log(error);
@@ -13,7 +13,7 @@ module.exports = {
     }
   },
 
-  getCurrentUserAdvices: async (req, res) => {
+  getUserAdvices: async (req, res) => {
     try {
       const { userId } = req.params;
       const advices = await Advice.findAll({
