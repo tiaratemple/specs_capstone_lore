@@ -5,7 +5,11 @@ module.exports = {
   addStory: async (req, res) => {
     try {
       const { stories, storyBy, userId } = req.body;
-      await Story.create({ stories, storyBy, userId });
+      await Story.create({
+        stories,
+        storyBy,
+        userId,
+      });
       res.sendStatus(200);
     } catch (error) {
       console.log(error);

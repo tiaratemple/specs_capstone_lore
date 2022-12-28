@@ -3,10 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border:solid#3C493F;
+  width:50%;
+  margin: 50px 0 50px 370px;
+  padding-bottom: 40px;
 }
 
 .new-advice-title {
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Abhaya Libre";
   padding: 20px 0 0 0;
   color: #3C493F;
@@ -16,9 +20,11 @@
   border: 1px solid #3C493F;
   margin-bottom: 10px;
   font-family: "Abhaya Libre";
-  font-size: 20px;
-  height: 200px;
-  width: 300px;
+  font-size: 25px;
+  height: 300px;
+  width: 400px;
+  border-radius: 5px;
+  background-color: #d9f7e8;
 }
 
 .advice-form-bottom {
@@ -31,8 +37,10 @@
   border: 1px solid #3C493F;
   margin-bottom: 10px;
   font-family: "Abhaya Libre";
-  font-size: 15px;
+  font-size: 20px;
   height: 30px;
+  border-radius: 5px;
+  background-color: #d9f7e8;
 }
 
 .advice-btn-container {
@@ -50,4 +58,5 @@
   font-family: "Abhaya Libre";
   font-size: 20px;
   margin-top: 10px;
+  border-radius: 5px;
 }

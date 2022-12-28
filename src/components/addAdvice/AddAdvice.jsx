@@ -1,29 +1,45 @@
-import React from "react";
+import { useContext } from "react";
+import axios from "axios";
 import { Formik } from "formik";
-import "../addAdvice/AddAdvice.css";
+import "./AddAdvice.css";
+import AuthContext from "../../store/AuthContext";
 
-const NewAdviceScreen = () => {
+const AddAdvice = () => {
+  const { token, userId } = useContext(AuthContext);
   const initialValues = {
-    type: "",
-    advice: "",
+    advices: "",
     adviceBy: "",
   };
 
   const onSubmit = (values) => {
     console.log(values);
+    const { advices, adviceBy } = values;
+
+    axios
+      .post(
+        `/advices/addAdvice`,
+        { advices, adviceBy, userId },
+        {
+          headers: { authorization: token },
+        }
+      )
+      .then((res) => {
+        console.log("post", res);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
     <section className="new-advice-container">
-      <h1 className="new-advice-title">Advice</h1>
+      <h1 className="new-advice-title">Add Advice</h1>
       <Formik initialValues={initialValues} onSubmit={onSubmit}>
         {({ values, handleChange, handleSubmit }) => (
           <form onSubmit={handleSubmit}>
             <div className="advice-form-top">
               <textarea
                 type="text"
-                value={values.advice}
-                name="advice"
+                value={values.advices}
+                name="advices"
                 placeholder="Add advice here..."
                 onChange={handleChange}
               ></textarea>
@@ -49,4 +65,4 @@ const NewAdviceScreen = () => {
   );
 };
 
-export default NewAdviceScreen;
+export default AddAdvice;

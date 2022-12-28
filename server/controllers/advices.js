@@ -4,8 +4,8 @@ const { Advice } = require("../models/advice");
 module.exports = {
   addAdvice: async (req, res) => {
     try {
-      const { advice, adviceBy, userId } = req.body;
-      await Advice.create({ advice, adviceBy, userId });
+      const { advices, adviceBy, userId } = req.body;
+      await Advice.create({ advices, adviceBy, userId });
       res.sendStatus(200);
     } catch (error) {
       console.log(error);
