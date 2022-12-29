@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import { BsSearch } from "react-icons/bs";
 import AuthContext from "../../store/AuthContext";
 
 const Header = () => {
@@ -27,7 +26,6 @@ const Header = () => {
         <button className="nav-btn" onClick={() => authCtx.logout()}>
           Logout
         </button>
-        <BsSearch size="1em" color="#7E8D85" />
       </nav>
     </header>
   );

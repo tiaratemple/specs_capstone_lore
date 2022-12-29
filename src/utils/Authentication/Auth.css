@@ -23,6 +23,7 @@
   margin-top: -20%;
   font-size: 50px;
   margin-left: 15%;
+  font-weight: 100;
 }
 
 .login-right-column {
@@ -44,6 +45,8 @@
   padding: 10px;
   height: 400px;
   width: 400px;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .login-form-input {
@@ -54,6 +57,7 @@
   margin: 10px;
   font-family: "Abhaya Libre";
   font-size: 25px;
+  border-radius: 5px;
 }
 
 .login-btn {
@@ -65,6 +69,14 @@
   font-family: "Abhaya Libre";
   font-size: 25px;
   margin: 5px;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #F0F7F4;
+  color: #3C493F;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
 }
 
 .create-acct-btn {
@@ -76,5 +88,12 @@
   margin: 15px;
   font-family: "Abhaya Libre";
   font-size: 18px;
+  border-radius: 5px;
+}
 
+.create-acct-btn:hover {
+  background-color: #F0F7F4;
+  color: #3C493F;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
 }

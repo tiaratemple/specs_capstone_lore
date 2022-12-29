@@ -26,7 +26,7 @@ header {
   color: #7E8D85;
   border: none;
   background-color: #A2E3C4;
-  padding-right: 20px;
+  padding-right: 10px;
  }
 
  .nav-btn:hover {
@@ -37,5 +37,5 @@ header {
  }
 
  nav {
-  padding-right: 20px;
+  padding-right: 10px;
  }
