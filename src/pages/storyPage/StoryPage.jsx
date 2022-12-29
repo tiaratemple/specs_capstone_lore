@@ -27,10 +27,6 @@ const StoryPage = () => {
     getUserStories();
   }, [getUserStories]);
 
-  const hideForm = () => {
-    setShowAddStoryForm(false);
-  };
-
   const addNewStory = () => {
     setShowAddStoryForm(true);
   };
@@ -51,13 +47,8 @@ const StoryPage = () => {
         </button>
       </div>
       {showAddStoryForm && (
-        <div className="x-out-story-btn-container">
-          <button className="x-out-story-btn" onClick={() => hideForm()}>
-            x
-          </button>
-        </div>
+        <AddStory setShowAddStoryForm={setShowAddStoryForm} />
       )}
-      {showAddStoryForm && <AddStory />}
       {stories &&
         stories.map((story) => {
           return <StoryCard story={story} key={story.id} />;

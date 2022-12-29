@@ -5,10 +5,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border:solid#3C493F;
-  width:70%;
-  margin: 20px 0 50px 220px;
+  border: 2px solid black;
+  width:50%;
   padding-bottom: 40px;
+  border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 .form-h1-styles {
@@ -95,7 +96,7 @@
   justify-content: center;
 }
 
-.save-btn {
+.save-advice-btn {
   background-color: #3C493F;
   color: #f0f7f4;
   border: none;
@@ -104,4 +105,30 @@
   font-family: "Abhaya Libre";
   font-size: 20px;
   border-radius: 5px;
+}
+
+.add-recipe-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.x-out-recipe-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.x-out-advice-btn {
+  border: none;
+  background: none;
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+.x-out-advice-btn:hover {
+  opacity: 0.5;
+}
+
+.save-advice-btn:hover {
+  opacity: 0.5;
 }

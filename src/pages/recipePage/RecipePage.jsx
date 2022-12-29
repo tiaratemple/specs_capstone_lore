@@ -27,10 +27,6 @@ const RecipePage = () => {
     getUserRecipes();
   }, [getUserRecipes]);
 
-  const hideForm = () => {
-    setShowAddRecipeForm(false);
-  };
-
   const addNewRecipe = () => {
     setShowAddRecipeForm(true);
   };
@@ -50,14 +46,8 @@ const RecipePage = () => {
         </button>
       </div>
       {showAddRecipeForm && (
-        <div className="x-btn-container">
-          <button className="x-out-form-btn" onClick={() => hideForm()}>
-            x
-          </button>
-        </div>
+        <AddRecipe setShowAddRecipeForm={setShowAddRecipeForm} />
       )}
-      {showAddRecipeForm && <AddRecipe />}
-      {/* Recipe card should only show if we have recipes */}
       {recipes &&
         recipes.map((recipe) => {
           return <RecipeCard recipe={recipe} key={recipe.id} />;
