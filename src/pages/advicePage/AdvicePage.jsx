@@ -47,9 +47,7 @@ const AdvicePage = () => {
         </button>
       </div>
       {showAddAdviceForm && (
-        <div className="add-form-container">
-          <AddAdvice setShowAddAdviceForm={setShowAddAdviceForm} />
-        </div>
+        <AddAdvice setShowAddAdviceForm={setShowAddAdviceForm} />
       )}
       {advices &&
         advices.map((advice) => {

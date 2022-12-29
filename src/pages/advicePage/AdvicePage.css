@@ -43,8 +43,3 @@ h1 {
   background-color: #69716d;
   color: white;
 }
-
-.add-form-container {
-  display: flex;
-  justify-content: center;
-}
