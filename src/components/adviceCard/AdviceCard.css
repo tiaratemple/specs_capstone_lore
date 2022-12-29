@@ -1,3 +1,6 @@
+ @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Tangerine&display=swap'); 
+
+
 .advice-card-container {
   background-color: #7E8D85;
   display: flex;
@@ -17,7 +20,7 @@
 }
 
 .advice-by-title {
-  font-family: "Fleur De Leah";
+  font-family: "Tangerine";
   color: black;
   font-size: 40px;
 }

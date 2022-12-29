@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Tangerine&display=swap'); 
+
 h1 {
   font-size: 50px;
   font-family: "Abhaya Libre";
@@ -22,7 +24,7 @@ h1 {
 
 .advice-p-text {
   color:#3C493F;
-  font-family: "Fleur De Leah";
+  font-family: "Tangerine";
   font-size: 35px;
   margin-bottom: 100px;
 }

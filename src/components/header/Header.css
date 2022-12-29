@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Fleur+De+Leah&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Tangerine&display=swap'); 
 header {
   width: 100%;
   height: 60px;
@@ -12,8 +11,8 @@ header {
 } 
 
 .header-h2-styles {
-  font-family: "Fleur De Leah";
-  font-size: 80px;
+  font-family: "Tangerine";
+  font-size: 100px;
   font-weight: 100;
   color: #3C493F;
   padding-left: 20px;

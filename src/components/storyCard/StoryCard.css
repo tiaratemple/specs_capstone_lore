@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Tangerine&display=swap'); 
+
 .story-card-container {
   background-color: #7E8D85;
   display: flex;
@@ -17,7 +19,7 @@
 }
 
 .story-by-title {
-  font-family: "Fleur De Leah";
+  font-family: "Tangerine";
   color: black;
   font-size: 40px;
 }

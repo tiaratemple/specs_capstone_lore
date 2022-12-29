@@ -47,36 +47,37 @@ const Auth = () => {
   };
 
   return (
-    <main>
+    <div className="auth-content-container">
       <div className="login-left-column">
-        <h1 className="login-title">Lore</h1>
-        <h2 className="login-mission-stmt">Preserve your family traditions.</h2>
+        <div className="login-left-content">
+          <h1 className="login-title">Lore</h1>
+          <h2 className="login-mission-stmt">Preserve your</h2>
+          <h2 className="login-mission-stmt">family traditions.</h2>
+        </div>
       </div>
-      <div className="login-right-column">
-        <form className="login-form" onSubmit={submitHandler}>
-          <input
-            className="login-form-input"
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={enterUsername}
-          />
-          <input
-            className="login-form-input"
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={enterPassword}
-          />
-          <button className="login-btn" onClick={() => setRegister(false)}>
-            Login
-          </button>
-          <button className="create-acct-btn" onClick={() => setRegister(true)}>
-            Create new account
-          </button>
-        </form>
-      </div>
-    </main>
+      <form className="login-form" onSubmit={submitHandler}>
+        <input
+          className="login-form-input"
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={enterUsername}
+        />
+        <input
+          className="login-form-input"
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={enterPassword}
+        />
+        <button className="login-btn" onClick={() => setRegister(false)}>
+          Login
+        </button>
+        <button className="create-acct-btn" onClick={() => setRegister(true)}>
+          Create new account
+        </button>
+      </form>
+    </div>
   );
 };
 

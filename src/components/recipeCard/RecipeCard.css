@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Fleur+De+Leah&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Tangerine&display=swap'); 
 
 .recipe-card-container {
   background-color: #7E8D85;
@@ -13,7 +12,7 @@
 }
 
 .recipe-card-title {
-  font-family: "Fleur De Leah";
+  font-family: "Tangerine";
   font-weight: 100;
   font-size: 50px;
   color: black;
