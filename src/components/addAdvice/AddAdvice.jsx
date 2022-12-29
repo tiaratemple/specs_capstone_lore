@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import "./AddAdvice.css";
 import AuthContext from "../../store/AuthContext";
 
-const AddAdvice = () => {
+const AddAdvice = ({ setShowAddAdviceForm }) => {
   const { token, userId } = useContext(AuthContext);
   const initialValues = {
     advices: "",
@@ -31,7 +31,17 @@ const AddAdvice = () => {
 
   return (
     <section className="new-advice-container">
-      <h1 className="new-advice-title">Add Advice</h1>
+      <div className="x-out-advice-btn-container">
+        <button
+          className="x-out-advice-btn"
+          onClick={() => setShowAddAdviceForm(false)}
+        >
+          x
+        </button>
+      </div>
+      <div>
+        <h1 className="new-advice-title">Add Advice</h1>
+      </div>
       <Formik initialValues={initialValues} onSubmit={onSubmit}>
         {({ values, handleChange, handleSubmit }) => (
           <form onSubmit={handleSubmit}>

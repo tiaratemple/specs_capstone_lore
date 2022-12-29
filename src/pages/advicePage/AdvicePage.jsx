@@ -27,10 +27,6 @@ const AdvicePage = () => {
     getUserAdvices();
   }, [getUserAdvices]);
 
-  const hideForm = () => {
-    setShowAddAdviceForm(false);
-  };
-
   const addNewAdvice = () => {
     setShowAddAdviceForm(true);
   };
@@ -51,13 +47,10 @@ const AdvicePage = () => {
         </button>
       </div>
       {showAddAdviceForm && (
-        <div className="x-out-advice-btn-container">
-          <button className="x-out-advice-btn" onClick={() => hideForm()}>
-            x
-          </button>
+        <div className="add-form-container">
+          <AddAdvice setShowAddAdviceForm={setShowAddAdviceForm} />
         </div>
       )}
-      {showAddAdviceForm && <AddAdvice />}
       {advices &&
         advices.map((advice) => {
           return <AdviceCard advice={advice} key={advice.id} />;
