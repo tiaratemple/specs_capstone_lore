@@ -12,6 +12,8 @@ export const useTypingText = (words, keySpeed = 1000, maxPauseAmount = 10) => {
   const letterIndex = useRef();
 
   useEffect(() => {
+    let pauseCounter = 0;
+
     const backspace = () => {
       if (letterIndex.current === 0) {
         const isOnLastWord = wordIndex === words.length - 1;
@@ -30,6 +32,9 @@ export const useTypingText = (words, keySpeed = 1000, maxPauseAmount = 10) => {
     const typeLetter = () => {
       if (letterIndex.current >= words[wordIndex].length) {
         direction.current = BACKWARD;
+
+        pauseCounter = maxPauseAmount;
+
         return;
       }
 
@@ -39,6 +44,11 @@ export const useTypingText = (words, keySpeed = 1000, maxPauseAmount = 10) => {
     };
 
     typingInterval.current = setInterval(() => {
+      if (pauseCounter > 0) {
+        pauseCounter = pauseCounter - 1;
+        return;
+      }
+
       if (direction.current === FORWARD) {
         typeLetter();
       } else {
