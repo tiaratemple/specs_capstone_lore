@@ -69,3 +69,28 @@
   right: 0;
 }
 
+@media only screen and (min-width:320px) and (max-width:600px) {
+
+  .homepage-content-container {
+    width: 100%;
+  }
+
+  .home-welcome-stmt {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .welcome-banner {
+    height: 150px;
+    width: 100vw;
+  }
+
+  .banner-preserve {
+    font-size: 40px;
+  }
+
+  .word span {
+    font-size: 40px;
+  }
+}

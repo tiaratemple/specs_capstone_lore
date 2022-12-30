@@ -87,3 +87,40 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (min-width:320px) and (max-width:600px) {
+
+  .add-form-wrapper {
+    width: 100%;
+  }
+
+  .new-advice-container {
+    width: 90vw;
+  }
+
+  .new-advice-title {
+    font-size: 20px;
+  }
+
+  .advice-form-top textarea {
+    font-size: 15px;
+    height: 150px;
+    width: 200px;
+  }
+
+  .advice-form-bottom input {
+    font-size: 12px;
+    height: 20px;
+  }
+
+  .save-advice-btn {
+    height: 15px;
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .x-out-advice-btn {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+}

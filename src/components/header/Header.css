@@ -34,3 +34,16 @@ header {
  nav {
   padding-right: 10px;
  }
+
+@media only screen and (min-width:320px) and (max-width:600px) {
+  
+  .header-h2-styles {
+    font-size: 30px;
+    padding-left: 10px;
+   }
+
+   .nav-btn {
+    font-size: 10px;
+   }
+
+}

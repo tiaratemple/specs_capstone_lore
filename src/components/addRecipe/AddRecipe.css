@@ -131,3 +131,44 @@
 .save-advice-btn:hover {
   opacity: 0.5;
 }
+
+@media only screen and (min-width:320px) and (max-width:600px) {
+
+  .add-recipe-wrapper {
+    width: 100%;
+  }
+
+  .form-container {
+    width:90vw;
+  }
+
+  .form-h1-styles {
+    font-size: 20px;
+  }
+
+  .form-row-top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .form-row-top input {
+    height: 20px;
+    width: 150px;
+    font-size: 15px;
+  }
+
+  .form-prep input {
+    height: 20px;
+    width: 200px;
+    font-size: 15px;
+  }
+  .form-row-4 textarea {
+    height: 200px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+
+}
