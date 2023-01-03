@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import "./AddStory.css";
 import AuthContext from "../../store/AuthContext";
 
-const AddStory = ({ setShowAddStoryForm }) => {
+const AddStory = ({ setShowAddStoryForm, setNewStoryAdded }) => {
   const { token, userId } = useContext(AuthContext);
   const initialValues = {
     stories: "",
@@ -12,7 +12,6 @@ const AddStory = ({ setShowAddStoryForm }) => {
   };
 
   const onSubmit = (values) => {
-    console.log(values);
     const { stories, storyBy } = values;
 
     axios
@@ -24,7 +23,9 @@ const AddStory = ({ setShowAddStoryForm }) => {
         }
       )
       .then((res) => {
-        console.log("post", res);
+        res.status(200);
+        setShowAddStoryForm(false);
+        setNewStoryAdded(true);
       })
       .catch((err) => console.log(err));
   };

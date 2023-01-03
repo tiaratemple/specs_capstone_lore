@@ -4,7 +4,7 @@ import axios from "axios";
 import { useContext } from "react";
 import AuthContext from "../../store/AuthContext";
 
-const AddRecipe = ({ setShowAddRecipeForm }) => {
+const AddRecipe = ({ setShowAddRecipeForm, setNewRecipeAdded }) => {
   const { token, userId } = useContext(AuthContext);
   const initialValues = {
     recipeName: "",
@@ -27,7 +27,9 @@ const AddRecipe = ({ setShowAddRecipeForm }) => {
         }
       )
       .then((res) => {
-        console.log("post", res);
+        res.status(200);
+        setShowAddRecipeForm(false);
+        setNewRecipeAdded(true);
       })
       .catch((err) => console.log(err));
   };

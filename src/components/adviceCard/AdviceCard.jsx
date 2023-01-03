@@ -1,7 +1,6 @@
 import "./AdviceCard.css";
 
 const AdviceCard = ({ advice }) => {
-  console.log("advice", advice);
   const { advices, adviceBy } = advice;
 
   return (

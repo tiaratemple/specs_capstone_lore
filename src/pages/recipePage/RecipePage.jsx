@@ -8,15 +8,15 @@ import "./RecipePage.css";
 const RecipePage = () => {
   const [recipes, setRecipes] = useState([]);
   const [showAddRecipeForm, setShowAddRecipeForm] = useState(false);
-
+  const [newRecipeAdded, setNewRecipeAdded] = useState(false);
   const { userId } = useContext(AuthContext);
 
   const getUserRecipes = useCallback(() => {
     axios
       .get(`/recipes/${userId}`)
       .then((res) => {
-        console.log("res", res);
         setRecipes(res.data);
+        setNewRecipeAdded(false);
       })
       .catch((err) => {
         console.log(err);
@@ -25,7 +25,7 @@ const RecipePage = () => {
 
   useEffect(() => {
     getUserRecipes();
-  }, [getUserRecipes]);
+  }, [getUserRecipes, newRecipeAdded]);
 
   const addNewRecipe = () => {
     setShowAddRecipeForm(true);
@@ -46,7 +46,10 @@ const RecipePage = () => {
         </button>
       </div>
       {showAddRecipeForm && (
-        <AddRecipe setShowAddRecipeForm={setShowAddRecipeForm} />
+        <AddRecipe
+          setShowAddRecipeForm={setShowAddRecipeForm}
+          setNewRecipeAdded={setNewRecipeAdded}
+        />
       )}
       {recipes &&
         recipes.map((recipe) => {

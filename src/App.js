@@ -28,9 +28,24 @@ const App = () => {
             path="/auth"
             element={!authCtx.token ? <Auth /> : <Navigate replace to={"/"} />}
           />
-          <Route path="/recipes/:userId" element={<RecipePage />} />
-          <Route path="/stories/:userId" element={<StoryPage />} />
-          <Route path="/advices/:userId" element={<AdvicePage />} />
+          <Route
+            path="/recipes/:userId"
+            element={
+              authCtx.token ? <RecipePage /> : <Navigate replace to={"/auth"} />
+            }
+          />
+          <Route
+            path="/stories/:userId"
+            element={
+              authCtx.token ? <StoryPage /> : <Navigate replace to={"/auth"} />
+            }
+          />
+          <Route
+            path="/advices/:userId"
+            element={
+              authCtx.token ? <AdvicePage /> : <Navigate replace to={"/auth"} />
+            }
+          />
         </Routes>
       </main>
     </div>

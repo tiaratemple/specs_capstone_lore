@@ -8,6 +8,7 @@ import "./AdvicePage.css";
 const AdvicePage = () => {
   const [advices, setAdvices] = useState([]);
   const [showAddAdviceForm, setShowAddAdviceForm] = useState(false);
+  const [newAdviceAdded, setNewAdviceAdded] = useState(false);
 
   const { userId } = useContext(AuthContext);
 
@@ -15,8 +16,8 @@ const AdvicePage = () => {
     axios
       .get(`/advices/${userId}`)
       .then((res) => {
-        console.log("res", res);
         setAdvices(res.data);
+        setNewAdviceAdded(false);
       })
       .catch((err) => {
         console.log(err);
@@ -25,7 +26,7 @@ const AdvicePage = () => {
 
   useEffect(() => {
     getUserAdvices();
-  }, [getUserAdvices]);
+  }, [getUserAdvices, newAdviceAdded]);
 
   const addNewAdvice = () => {
     setShowAddAdviceForm(true);
@@ -47,7 +48,10 @@ const AdvicePage = () => {
         </button>
       </div>
       {showAddAdviceForm && (
-        <AddAdvice setShowAddAdviceForm={setShowAddAdviceForm} />
+        <AddAdvice
+          setShowAddAdviceForm={setShowAddAdviceForm}
+          setNewAdviceAdded={setNewAdviceAdded}
+        />
       )}
       {advices &&
         advices.map((advice) => {

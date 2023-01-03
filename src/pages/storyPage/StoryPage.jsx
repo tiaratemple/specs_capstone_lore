@@ -8,15 +8,15 @@ import "./StoryPage.css";
 const StoryPage = () => {
   const [stories, setStories] = useState([]);
   const [showAddStoryForm, setShowAddStoryForm] = useState(false);
-
+  const [newStoryAdded, setNewStoryAdded] = useState(false);
   const { userId } = useContext(AuthContext);
 
   const getUserStories = useCallback(() => {
     axios
       .get(`/stories/${userId}`)
       .then((res) => {
-        console.log("res", res);
         setStories(res.data);
+        setNewStoryAdded(false);
       })
       .catch((err) => {
         console.log(err);
@@ -25,7 +25,7 @@ const StoryPage = () => {
 
   useEffect(() => {
     getUserStories();
-  }, [getUserStories]);
+  }, [getUserStories, newStoryAdded]);
 
   const addNewStory = () => {
     setShowAddStoryForm(true);
@@ -47,7 +47,10 @@ const StoryPage = () => {
         </button>
       </div>
       {showAddStoryForm && (
-        <AddStory setShowAddStoryForm={setShowAddStoryForm} />
+        <AddStory
+          setShowAddStoryForm={setShowAddStoryForm}
+          setNewStoryAdded={setNewStoryAdded}
+        />
       )}
       {stories &&
         stories.map((story) => {

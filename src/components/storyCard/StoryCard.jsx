@@ -1,7 +1,6 @@
 import "./StoryCard.css";
 
 const StoryCard = ({ story }) => {
-  console.log("story", story);
   const { stories, storyBy } = story;
 
   return (

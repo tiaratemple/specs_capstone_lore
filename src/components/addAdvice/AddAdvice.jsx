@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import "./AddAdvice.css";
 import AuthContext from "../../store/AuthContext";
 
-const AddAdvice = ({ setShowAddAdviceForm }) => {
+const AddAdvice = ({ setShowAddAdviceForm, setNewAdviceAdded }) => {
   const { token, userId } = useContext(AuthContext);
   const initialValues = {
     advices: "",
@@ -12,7 +12,6 @@ const AddAdvice = ({ setShowAddAdviceForm }) => {
   };
 
   const onSubmit = (values) => {
-    console.log(values);
     const { advices, adviceBy } = values;
 
     axios
@@ -24,7 +23,9 @@ const AddAdvice = ({ setShowAddAdviceForm }) => {
         }
       )
       .then((res) => {
-        console.log("post", res);
+        res.status(200);
+        setShowAddAdviceForm(false);
+        setNewAdviceAdded(true);
       })
       .catch((err) => console.log(err));
   };

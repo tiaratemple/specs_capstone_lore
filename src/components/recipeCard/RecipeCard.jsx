@@ -2,7 +2,6 @@ import { RiHandHeartLine } from "react-icons/ri";
 import "./RecipeCard.css";
 
 const RecipeCard = ({ recipe }) => {
-  console.log("recipe", recipe);
   const { recipeName, passedOnFrom, prep, ingredients, instructions } = recipe;
   return (
     <div className="recipe-card-wrapper">
