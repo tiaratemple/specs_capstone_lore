@@ -15,7 +15,6 @@ const AddRecipe = ({ setShowAddRecipeForm, setNewRecipeAdded }) => {
   };
 
   const onSubmit = (values) => {
-    console.log("values", values);
     const { recipeName, passedOnFrom, prep, ingredients, instructions } =
       values;
     axios
@@ -26,8 +25,7 @@ const AddRecipe = ({ setShowAddRecipeForm, setNewRecipeAdded }) => {
           headers: { authorization: token },
         }
       )
-      .then((res) => {
-        res.status(200);
+      .then(() => {
         setShowAddRecipeForm(false);
         setNewRecipeAdded(true);
       })

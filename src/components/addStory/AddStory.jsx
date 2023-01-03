@@ -22,8 +22,7 @@ const AddStory = ({ setShowAddStoryForm, setNewStoryAdded }) => {
           headers: { authorization: token },
         }
       )
-      .then((res) => {
-        res.status(200);
+      .then(() => {
         setShowAddStoryForm(false);
         setNewStoryAdded(true);
       })

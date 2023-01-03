@@ -12,7 +12,6 @@ import { useLocation } from "react-router-dom";
 const App = () => {
   const authCtx = useContext(AuthContext);
   const location = useLocation();
-  console.log("authctx", authCtx);
   return (
     <div className="App">
       {location.pathname !== "/auth" && <Header />}

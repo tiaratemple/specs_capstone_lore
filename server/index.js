@@ -39,13 +39,4 @@ app.post("/recipes/addRecipe", addRecipe);
 app.post("/stories/addStory", addStory);
 app.post("/advices/addAdvice", addAdvice);
 
-// sequelize
-//   .sync({ force: true })
-//   .then(() => {
-//     app.listen(SERVER_PORT, () =>
-//       console.log(`Backend is running on  ${SERVER_PORT}`)
-//     );
-//   })
-//   .catch((err) => console.log(err));
-
 app.listen(SERVER_PORT, () => console.log(`backend running on ${SERVER_PORT}`));

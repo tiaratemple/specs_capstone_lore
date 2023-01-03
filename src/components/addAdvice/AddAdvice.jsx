@@ -22,8 +22,7 @@ const AddAdvice = ({ setShowAddAdviceForm, setNewAdviceAdded }) => {
           headers: { authorization: token },
         }
       )
-      .then((res) => {
-        res.status(200);
+      .then(() => {
         setShowAddAdviceForm(false);
         setNewAdviceAdded(true);
       })

@@ -7,7 +7,6 @@ module.exports = {
     const headerToken = req.get("Authorization");
 
     if (!headerToken) {
-      console.log("ERROR IN auth middleware");
       res.sendStatus(401);
     }
 
