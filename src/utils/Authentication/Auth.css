@@ -95,6 +95,24 @@
   margin-top: 150px;
 }
 
+.recruiter-access {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recruiter {
+  font-size: medium;
+}
+
+.credentials {
+  color: black;
+  font-size: small;
+  margin-bottom: -5px;
+}
+
 @media only screen and (min-width:320px) and (max-width:600px) {
   .auth-content-container {
     display: flex;
@@ -113,8 +131,8 @@
   }
 
   .login-form {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 210px;
   }
 
   .login-form-input {
@@ -133,6 +151,15 @@
     width: 100px;
     height: 15px;
     font-size: 10px;
+  }
+
+  .recruiter {
+    font-size: small;
+    margin-bottom: -10px;
+  }
+
+  .credentials {
+    margin-bottom: -10px;
   }
   
 }

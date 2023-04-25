@@ -74,6 +74,11 @@ const Auth = () => {
         <button className="create-acct-btn" onClick={() => setRegister(true)}>
           Create new account
         </button>
+        <div className="recruiter-access">
+          <h3 className="recruiter">Recruiter Credentials:</h3>
+          <p className="credentials">Username: recruiter</p>
+          <p className="credentials">Password: 1111</p>
+        </div>
       </form>
     </div>
   );
